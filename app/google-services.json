@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "828437982563",
+    "firebase_url": "https://pinkspace-f3a95-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pinkspace-f3a95",
+    "storage_bucket": "pinkspace-f3a95.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828437982563:android:a68c99159e70b6f75e7756",
+        "android_client_info": {
+          "package_name": "com.example.pinkspace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828437982563-e04u6mptpl7h8jqbguajpo71tc13cjb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk6ii1HLS54KaHK0DfxtzynUs-luG6woE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828437982563-e04u6mptpl7h8jqbguajpo71tc13cjb1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

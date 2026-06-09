@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="terms_conditions_text"><![CDATA[
+1. Tujuan Aplikasi
+
+PinkSpace membantu mencatat dan memperkirakan siklus haid pengguna.
+
+
+2. Data Pengguna
+
+Aplikasi menyimpan data seperti nama, email, username, tanggal haid, panjang siklus, mood, dan catatan harian.
+
+
+3. Prediksi
+
+Hasil prediksi hanya perkiraan dan bisa berbeda dengan kondisi tubuh sebenarnya.
+
+
+4. Kesehatan
+
+PinkSpace bukan pengganti dokter. Jika ada keluhan serius, pengguna disarankan berkonsultasi dengan tenaga kesehatan.
+
+
+5. Persetujuan
+
+Dengan mencentang kotak ini, pengguna menyetujui Terms and Conditions PinkSpace.
+]]></string>
+
+</resources>
