@@ -1,67 +1,47 @@
-PinkSpace
+# PinkSpace
 
-PinkSpace adalah aplikasi Android berbasis Kotlin yang dirancang untuk membantu pengguna mencatat, memantau, dan memprediksi siklus menstruasi. Aplikasi ini menyediakan fitur prediksi periode menstruasi berikutnya, estimasi masa subur, pencatatan mood dan flow harian, kalender, serta pengelolaan profil pengguna.
+PinkSpace adalah aplikasi Android berbasis Kotlin yang dirancang untuk membantu pengguna mencatat, memantau, dan memprediksi siklus menstruasi secara lebih mudah. Aplikasi ini menyediakan fitur pencatatan siklus, prediksi periode menstruasi berikutnya, pencatatan mood dan flow harian, kalender, serta pengelolaan profil pengguna.
 
-Deskripsi Project
+## Overview
 
-PinkSpace dikembangkan sebagai aplikasi mobile yang berfokus pada pencatatan siklus menstruasi secara sederhana dan mudah digunakan. Pengguna dapat membuat akun, login, menyetujui syarat penggunaan, mengisi data siklus, melihat hasil prediksi periode berikutnya, mencatat kondisi harian, serta mengelola informasi profil.
+PinkSpace dikembangkan sebagai aplikasi mobile yang berfokus pada kesehatan menstruasi. Aplikasi ini membantu pengguna dalam memahami pola siklus menstruasi melalui pencatatan data secara digital.
 
-Aplikasi ini menggunakan Firebase sebagai layanan backend untuk autentikasi pengguna dan penyimpanan data.
+Dengan menggunakan aplikasi ini, pengguna dapat memasukkan tanggal menstruasi terakhir dan panjang siklus, kemudian sistem akan menghitung prediksi menstruasi berikutnya, tanggal ovulasi, serta masa subur.
 
-Fitur Utama
+## Main Features
 
-1. Login Pengguna
-Pengguna dapat masuk ke aplikasi menggunakan email dan password. Sistem login menggunakan Firebase Authentication.
+- **User Authentication:** pengguna dapat melakukan registrasi dan login menggunakan email serta password.
+- **Terms and Conditions:** pengguna wajib menyetujui syarat dan ketentuan sebelum akun dibuat.
+- **Period Prediction:** aplikasi menghitung prediksi menstruasi berikutnya berdasarkan tanggal menstruasi terakhir dan panjang siklus.
+- **Fertile Window Estimation:** aplikasi menampilkan estimasi awal dan akhir masa subur.
+- **Ovulation Date:** aplikasi memperkirakan tanggal ovulasi pengguna.
+- **Daily Log:** pengguna dapat mencatat mood, flow menstruasi, dan catatan harian.
+- **Calendar View:** pengguna dapat memilih dan melihat tanggal melalui tampilan kalender.
+- **Profile Management:** pengguna dapat memperbarui username, avatar, panjang siklus rata-rata, dan durasi menstruasi rata-rata.
+- **Logout:** pengguna dapat keluar dari akun dan kembali ke halaman login.
 
-2. Registrasi Akun
-Pengguna baru dapat membuat akun dengan mengisi nama lengkap, email, username, dan password. Sistem juga melakukan validasi input seperti email wajib valid, username minimal 3 karakter, dan password minimal 6 karakter.
+## Architecture & Paradigm
 
-3. Persetujuan Terms and Conditions
-Sebelum akun dibuat, pengguna harus menyetujui terms and conditions melalui checkbox persetujuan. Jika belum disetujui, tombol pembuatan akun tidak dapat digunakan.
+Aplikasi ini menggunakan struktur Android berbasis Activity dan Fragment. Setiap fitur utama dipisahkan ke dalam komponen yang berbeda agar kode lebih terorganisasi dan mudah dikembangkan.
 
-4. Prediksi Siklus Menstruasi
-Pengguna dapat memilih tanggal menstruasi terakhir dan memasukkan panjang siklus. Aplikasi kemudian menghitung:
-- Prediksi menstruasi berikutnya
-- Tanggal ovulasi
-- Awal masa subur
-- Akhir masa subur
+- **Authentication Layer:** menangani proses login, registrasi, dan logout pengguna menggunakan Firebase Authentication.
+- **Main Navigation Layer:** mengatur perpindahan halaman utama melalui `MainActivity` dan beberapa fragment.
+- **Data Processing Layer:** menangani perhitungan siklus menstruasi melalui file `PeriodCalculator.kt`.
+- **Database Layer:** menyimpan data pengguna, data siklus, dan catatan harian menggunakan Firebase.
+- **User Interface Layer:** menampilkan halaman aplikasi seperti Home, Calendar, Log, dan Profile.
 
-5. Penyimpanan Data Siklus
-Data hasil prediksi disimpan ke Firebase Firestore pada collection `cycles`.
+## Stack & Dependencies
 
-6. Kalender
-Aplikasi menyediakan tampilan kalender untuk memilih dan melihat tanggal. Kalender dibatasi dari 5 tahun sebelum hingga 5 tahun setelah tanggal saat ini.
+- **Language:** Kotlin
+- **Platform:** Android
+- **IDE:** Android Studio
+- **Build System:** Gradle Kotlin DSL
+- **Authentication:** Firebase Authentication
+- **Database:** Firebase Firestore dan Firebase Realtime Database
+- **UI Components:** AndroidX, Material Components, ConstraintLayout
+- **View Binding:** digunakan untuk menghubungkan layout XML dengan kode Kotlin secara lebih aman dan efisien.
 
-7. Daily Log
-Pengguna dapat mencatat kondisi harian, meliputi:
-- Mood
-- Flow menstruasi
-- Catatan tambahan
-
-Data log harian disimpan ke Firebase Firestore pada collection `daily_logs`.
-
-8. Profil Pengguna
-Pengguna dapat melihat dan memperbarui data profil, seperti:
-- Username
-- Avatar
-- Rata-rata panjang siklus
-- Rata-rata durasi menstruasi
-
-9. Logout
-Pengguna dapat keluar dari akun dan kembali ke halaman login.
-
-Teknologi yang Digunakan
-
-Project ini dikembangkan menggunakan:
-
-- Kotlin
-- Android Studio
-- Gradle Kotlin DSL
-- Firebase Authentication
-- Firebase Firestore
-- Firebase Realtime Database
-
-Struktur Project
+## Project Structure
 
 ```text
 PinkSpacefinalbissmilah/
@@ -83,9 +63,6 @@ PinkSpacefinalbissmilah/
 │   │   │   │
 │   │   │   ├── res/
 │   │   │   └── AndroidManifest.xml
-│   │   │
-│   │   ├── androidTest/
-│   │   └── test/
 │   │
 │   ├── build.gradle.kts
 │   ├── google-services.json
