@@ -1,34 +1,28 @@
-# PinkSpace
+# PinkSpace : Smart Period & Ovulation Tracker
 
-PinkSpace adalah aplikasi Android berbasis Kotlin yang dirancang untuk membantu pengguna mencatat, memantau, dan memprediksi siklus menstruasi secara lebih mudah. Aplikasi ini menyediakan fitur pencatatan siklus, prediksi periode menstruasi berikutnya, pencatatan mood dan flow harian, kalender, serta pengelolaan profil pengguna.
-
-## Overview
-
-PinkSpace dikembangkan sebagai aplikasi mobile yang berfokus pada kesehatan menstruasi. Aplikasi ini membantu pengguna dalam memahami pola siklus menstruasi melalui pencatatan data secara digital.
-
-Dengan menggunakan aplikasi ini, pengguna dapat memasukkan tanggal menstruasi terakhir dan panjang siklus, kemudian sistem akan menghitung prediksi menstruasi berikutnya, tanggal ovulasi, serta masa subur.
+PinkSpace is a secure, cloud-synced Android application designed to help users track their menstrual cycles, predict ovulation, and monitor fertile windows with high precision. Developed using Kotlin, the application prioritizes data privacy, structural stability, and a seamless user experience for managing sensitive reproductive health information. By replacing manual calendar tracking with an automated system, PinkSpace ensures that cycle records are accurately calculated and permanently safeguarded against device loss.
 
 ## Main Features
 
-- **User Authentication:** pengguna dapat melakukan registrasi dan login menggunakan email serta password.
-- **Terms and Conditions:** pengguna wajib menyetujui syarat dan ketentuan sebelum akun dibuat.
-- **Period Prediction:** aplikasi menghitung prediksi menstruasi berikutnya berdasarkan tanggal menstruasi terakhir dan panjang siklus.
-- **Fertile Window Estimation:** aplikasi menampilkan estimasi awal dan akhir masa subur.
-- **Ovulation Date:** aplikasi memperkirakan tanggal ovulasi pengguna.
-- **Daily Log:** pengguna dapat mencatat mood, flow menstruasi, dan catatan harian.
-- **Calendar View:** pengguna dapat memilih dan melihat tanggal melalui tampilan kalender.
-- **Profile Management:** pengguna dapat memperbarui username, avatar, panjang siklus rata-rata, dan durasi menstruasi rata-rata.
-- **Logout:** pengguna dapat keluar dari akun dan kembali ke halaman login.
+- **User Authentication:** Users can register and log in using their email address and password.
+- **Terms and Conditions:** Users must agree to the terms and conditions before creating an account.
+- **Period Prediction:** The application calculates the next menstrual period based on the date of the last menstrual period and cycle length.
+- **Fertile Window Estimation:** The application displays the estimated start and end of the fertile period.
+- **Ovulation Date:** The application estimates the user's ovulation date.
+- **Daily Log:** Users can record moods, menstrual flow, and daily notes.
+- **Calendar View:** Users can select and view dates through a calendar view.
+- **Profile Management:** Users can update their username, avatar, average cycle length, and average menstrual duration.
+- **Logout:** Users can log out of their account and return to the login page.
 
 ## Architecture & Paradigm
 
-Aplikasi ini menggunakan struktur Android berbasis Activity dan Fragment. Setiap fitur utama dipisahkan ke dalam komponen yang berbeda agar kode lebih terorganisasi dan mudah dikembangkan.
+This app uses an Activity- and Fragment-based Android structure. Each main feature is separated into different components to make the code more organized and easier to develop.
 
-- **Authentication Layer:** menangani proses login, registrasi, dan logout pengguna menggunakan Firebase Authentication.
-- **Main Navigation Layer:** mengatur perpindahan halaman utama melalui `MainActivity` dan beberapa fragment.
-- **Data Processing Layer:** menangani perhitungan siklus menstruasi melalui file `PeriodCalculator.kt`.
-- **Database Layer:** menyimpan data pengguna, data siklus, dan catatan harian menggunakan Firebase.
-- **User Interface Layer:** menampilkan halaman aplikasi seperti Home, Calendar, Log, dan Profile.
+- **Authentication Layer:** handles user login, registration, and logout processes using Firebase Authentication.
+- **Main Navigation Layer:** manages navigation through the main page through `MainActivity` and several fragments.
+- **Data Processing Layer:** handles menstrual cycle calculations using the `PeriodCalculator.kt` file.
+- **Database Layer:** stores user data, cycle data, and diary entries using Firebase.
+- **User Interface Layer:** displays application pages such as Home, Calendar, Log, and Profile.
 
 ## Stack & Dependencies
 
@@ -37,9 +31,9 @@ Aplikasi ini menggunakan struktur Android berbasis Activity dan Fragment. Setiap
 - **IDE:** Android Studio
 - **Build System:** Gradle Kotlin DSL
 - **Authentication:** Firebase Authentication
-- **Database:** Firebase Firestore dan Firebase Realtime Database
+- **Database:** Firebase Firestore and Firebase Realtime Database
 - **UI Components:** AndroidX, Material Components, ConstraintLayout
-- **View Binding:** digunakan untuk menghubungkan layout XML dengan kode Kotlin secara lebih aman dan efisien.
+- **View Binding:** used to connect XML layouts with Kotlin code more safely and efficiently.
 
 ## Project Structure
 
